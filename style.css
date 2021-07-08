@@ -1,0 +1,838 @@
+/*
+
+Theme Name: Orange Grass
+Author: Stefan Sjoberg
+Author URI: http://stefansjoberg.net
+Version: 1.0
+
+*/
+
+/* ------------ Mobile Queries ------------ */
+
+/* Basic Stuff ------------ */
+
+@font-face {
+  font-family: Jellybaby;  
+  src: local('JellyBaby'), 
+  url("fonts/JellyBaby.ttf") format('truetype');  
+  font-weight: normal;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  color: #767B81;
+}
+
+::selection {
+  background-color: #191919;
+  color: #fff;
+}
+
+/* Headings ------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #4C4C4C;
+}
+
+/* Links ------------ */
+
+a:link,
+a:visited {
+  color: #4C4C4C;
+  text-decoration: none;
+}
+
+/* Images ------------ */
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignright {
+  padding: 4px;
+  margin: 0 0 2px 7px;
+  display: inline;
+}
+
+img.alignleft {
+  padding: 4px;
+  margin: 0 7px 2px 0;
+  display: inline;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.entry-post img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border: 0;
+}
+
+/* Main Layout ------------ */
+
+#top {
+  background-color: #E47138;
+}
+
+#main {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#bottom {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #323232;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+/* Blog Title + Logo ------------ */
+
+.blog-name {
+  font-size: 1.8rem;
+  line-height: 55px;
+  margin: 0;
+  float: left;
+  font-family: Jellybaby;
+  font-weight: normal;
+}
+
+.blog-name a {
+  color: #FFD79E;
+}
+
+.blog-logo {
+  float: left;
+  height: 45px;
+  width: auto;
+  margin: 5px;
+}
+
+/* Mobile Menu ------------ */
+
+#nav-main {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nav-trigger {
+  display: block;
+  float: right;
+  margin-right: 10px;
+  text-align: center;
+  font-size: inherit;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nav-trigger span {
+  display: inline-block;
+  padding: 10px 0;
+  line-height: 35px;
+  width: 100%;
+  color: #fff;
+  letter-spacing: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#nav-trigger span:hover {
+  color: #444;
+}
+
+#nav-mobile {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nav-mobile ul {
+  display: none;
+  list-style-type: none;
+  padding: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #FF6249; 
+}
+
+#nav-mobile li {
+  display: block;
+  padding: 7px 0;
+  margin: 0;
+}
+
+#nav-mobile a {
+  display: inline;
+  color: #f2f2f2;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#nav-mobile a:hover {
+  color: #BFBFBF; 
+}
+
+/* Article ------------ */
+
+.post {
+  background-color: #fff;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.post.status {
+  background-color: #222;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}
+
+.post.status p {
+  margin: 0;
+}
+
+.entry-content {
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Hero Styling ------------ */
+
+.hero,
+.hero-fallback {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-fallback:empty {
+  background-image: url(img/truppen2015.jpg);
+}
+
+/* Read More ------------ */
+
+.read-more {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.read-more a:link,
+.read-more a:visited {
+  display: inline-block;
+  padding: 15px;
+  background-color: #2e9a0e;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  transition: background .2s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.read-more a:hover {
+  background-color: #006700;
+}
+
+.read-more a:after {
+  font-family: FontAwesome;
+  content: '\f061';
+  margin-left: 5px;
+}
+
+/* Post Styling ------------ */
+
+.page-meta {
+  margin-bottom: 2.5rem;
+}
+
+.entry-meta {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #4C4C4C;
+  overflow: hidden;
+}
+
+.entry-title,
+.entry-title a:link,
+.entry-title a:visited {
+  color: #E47138;
+  margin-bottom: 0;
+}
+
+.entry-date {
+  margin: 5px 0 15px 0;
+}
+
+.entry-tags a:link,
+.entry-tags a:visited {
+  display: inline-block;
+  background-color: #E6ECF0;
+  padding: 3px 9px;
+  margin: 5px 5px 0 0;
+  color: #73797D;
+  letter-spacing: 2px;
+  border-radius: 3px;
+}
+
+.entry-tags a:hover {
+  background-color: #CDD3D7;
+}
+
+.entry-tags a:last-child {
+  margin-right: 0;
+}
+
+.entry-tags a:before {
+  font-family: FontAwesome;
+  content: "\f02b";
+  margin-right: 5px;
+}
+
+/* Pagination ------------ */
+
+.pagination {
+  text-align: center;
+  margin: 25px 0 0 0;
+}
+
+.pagination a:link {
+  color: #fff;
+}
+
+.page-numbers {
+  display: inline-block;
+  background-color: #2e9a0e;
+  border-radius: 3px;
+  padding: 6px 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-numbers.current {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Comment Styling ------------ */
+
+.comment-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #4C4C4C;
+  letter-spacing: 2px;
+}
+
+.comment-logged {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 6px 18px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: background .2s ease-in-out;
+}
+
+.comment-logged:link {
+  background-color: #ff4444;
+  color: #fff;
+}
+
+.comment-logged:hover {
+  background-color: #CC1111;
+}
+
+.comment-logged:before {
+  font-family: FontAwesome;
+  content: '\f08b';
+  margin-right: 10px;
+  color: #fff;
+}
+
+.comment-wait {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.entry-comment input[type="text"],
+.entry-comment input[type="submit"],
+.entry-comment textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  background-color: #E6ECF0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 3px;
+  border: 0;
+  resize: none;
+}
+
+.entry-comment input[type="text"]:focus,
+.entry-comment textarea:focus {
+  outline: none;
+}
+
+.entry-comment input[type="text"],
+.entry-comment textarea {
+  padding: 25px;
+  color: #383838;
+  border: none;
+  transition: background .2s ease-in-out;
+}
+
+.entry-comment textarea {
+  padding: 25px;
+}
+
+.entry-comment input[type="text"]:focus,
+.entry-comment textarea:focus {
+  background-color: #CDD3D7;
+}
+
+.entry-comment textarea {
+  height: 250px;
+}
+
+.entry-comment input[type="submit"] {
+  display: inline-block;
+  background-color: #2e9a0e;
+  color: #fff;
+  height: 50px;
+  border-radius: 3px;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  transition: background .2s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.entry-comment input[type="submit"]:focus,
+.entry-comment input[type="submit"]:hover {
+  background-color: #006700;
+}
+
+.comment-list li {
+  list-style: none;
+  margin: 0 0 25px 0;
+  font-size: 1.3rem;
+  font-weight: 300;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.comment-meta {
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  color: #4C4C4C;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.comment-meta img {
+  margin: 10px 0;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.comment-meta .author,
+.comment-meta .date {
+  width: 100%;
+  float: left;
+}
+
+.comment-meta .date {
+  color: #727272;
+}
+
+/* Social Buttons ------------ */
+
+.share {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  padding-bottom: 25px;
+}
+
+.share-link {
+  display: inline-block;
+  background-color: #E6ECF0;
+  text-align: center;
+  padding: 6px 18px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  margin-right: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background .2s ease-in-out;
+}
+ 
+.share-link:hover,
+.share-link:active {
+  color: #fff;
+}
+ 
+.share-twitter:link {
+  background: #41b7d8;
+  color: #fff;
+}
+ 
+.share-twitter:hover,
+.share-twitter:active {
+  background: #289EBF;
+}
+ 
+.share-facebook:link {
+  background: #3b5997;
+  color: #fff;
+}
+ 
+.share-facebook:hover,
+.share-facebook:active {
+  background: #22407E;
+}
+
+/* Embed Styling ------------ */
+
+#gfyVid {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.video-container { 
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.video-container iframe, 
+.video-container object, 
+.video-container embed, 
+.video-container video { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+
+/* Gallery */
+
+.gallery {
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.gallery-item {
+  float: left;
+  margin: 0;
+  padding: 0 6px 6px 0;
+  text-align: center;
+  width: 25%;
+}
+
+.gallery-item img {
+  border-radius: 3px;
+  display: block;
+}
+
+.gallery-caption {
+  margin-left: 0;
+}
+
+/* Team Profiles */
+
+.staff-member-listing {
+  text-align: center;
+}
+
+.staff-member {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  max-width: 225px;
+  width: 100%;
+}
+
+.staff-member figure {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.staff-member figure img {
+  width: 100%;
+  border-radius: 50%;
+  background-color: #dedede;
+  border: 7px solid #dedede;
+}
+
+.staff-member figurecaption {
+  width: 100%;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.staff-member h6 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+.staff-member p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* ------------ Larger than mobile ------------ */
+@media (min-width: 400px) {
+  
+      /* Article ------------ */
+  
+  .post.status .entry-content {
+    padding: 10px;
+  }
+
+  .entry-content {
+    padding: 20px;
+  }
+  
+}
+
+/* ------------ Larger than phablet ------------ */
+@media (min-width: 550px) {
+  
+  body {
+    font-size: 1.7rem;
+  }
+  
+  /* Article ------------ */
+  
+  .post.status .entry-content {
+    padding: 15px;
+  }
+
+  .entry-content {
+    padding: 20px 40px;
+  }
+  
+}
+
+/* ------------ Larger than tablet ------------ */
+@media (min-width: 750px) {
+  
+    /* Article ------------ */
+  
+  .post.status .entry-content {
+    padding: 20px;
+  }
+
+  .entry-content {
+    padding: 40px 80px;
+  }
+  
+}
+
+/* ------------ Desktop Queries ------------ */
+
+@media (min-width: 1000px) { 
+
+  body {
+    font-size: 1.8rem;
+    background-image: url(img/pattern_bw.jpg);
+  }
+  
+  /* Main Layout ------------ */
+  
+  #top {
+    padding: 10px 0;
+    margin-bottom: 50px;
+  }
+  
+  #main {
+    padding: 0 10px;
+  }
+  
+  /* Sidebar ------------ */
+  
+  .widget {
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Blog Title */
+  
+  .blog-name {
+    font-size: 2.5rem;
+  }
+  
+  /* Desktop Menu ------------ */
+  
+  #nav-main {
+    display: block;
+    float: right;
+  }
+  
+  #nav-main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    text-align: right;
+  }
+
+  #nav-main li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+  }
+  
+  #nav-main a {
+    display: inline;
+    color: #f6f6f6;
+    font-size: 1.6rem;
+    line-height: 55px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  #nav-main a:hover {
+    color: #C3C3C3; 
+  }
+  
+  #nav-trigger {
+    display: none; 
+  }
+
+  #nav-mobile {
+    display: none; 
+  }
+  
+  /* Article ------------ */
+
+  .post {
+    background-color: #fff;
+    margin-bottom: 25px;
+  }
+  
+  .post:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .post.status {
+    margin-bottom: 25px;
+    border-radius: 3px;
+  }
+  
+  .post.status .entry-content {
+    padding: 25px;
+  }
+
+  .entry-content {
+    padding: 60px 120px;
+  }
+  
+  /* Comment Styling ------------ */
+
+  
+  .comment-list li {
+    font-size: 1.6rem;
+    padding: 50px;
+  }
+  
+  .comment-meta {
+    line-height: 64px;
+  }
+
+  .comment-meta img {
+    float: left;
+    margin: 0px 15px 0px 0px;
+  }
+  
+  .comment-meta .author {
+    width: auto;
+  }
+  
+  .comment-meta .date {
+    width: auto;
+    float: right;
+  }
+  
+  /* Gallery */
+  
+  .gallery-item {
+    padding: 0 10px 10px 0;
+    width: 12.5%;
+  }
+  
+  /* Hero Styling ------------ */
+
+  .hero,
+  .hero-fallback {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+}
